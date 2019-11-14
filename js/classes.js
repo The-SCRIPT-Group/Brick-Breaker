@@ -20,7 +20,7 @@ class Ball {
 
 class Player {
     constructor() {
-        this.x = mouseX;
+        this.x = ball.x;
         this.y = ball.y + diameter / 2 + playerHeight / 2;
     }
 
