@@ -84,10 +84,10 @@ function checkBlocks() {
   for (var i = 0; i < block.length; i++) {
     if (ball.x + diameter / 2 >= block[i].x - size / 2 && ball.x - diameter / 2 <= block[i].x + size / 2 && ball.y + diameter / 2 >= block[i].y - size / 2 && ball.y - diameter / 2 <= block[i].y + size / 2) {
       d = [];
-      d[0] = dist(ball.x, ball.y, block[i].x - 15, block[i].y);
-      d[1] = dist(ball.x, ball.y, block[i].x + 15, block[i].y);
-      d[2] = dist(ball.x, ball.y, block[i].x, block[i].y - 15);
-      d[3] = dist(ball.x, ball.y, block[i].x, block[i].y + 15);
+      d[0] = dist(ball.x, ball.y, block[i].x - (size / 2), block[i].y);
+      d[1] = dist(ball.x, ball.y, block[i].x + (size / 2), block[i].y);
+      d[2] = dist(ball.x, ball.y, block[i].x, block[i].y - (size / 2));
+      d[3] = dist(ball.x, ball.y, block[i].x, block[i].y + (size / 2));
       miniPos = d.indexOf(Math.min(...d))
       if (miniPos > 1)
         ball.ySpeed *= -1;
