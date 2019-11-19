@@ -47,10 +47,10 @@ function mousePressed() {
 }
 
 function checkWall() {
-  if (ball.x <= 0 + size / 4 || ball.x >= width - size / 4) {
+  if (ball.x <= 0 + diameter / 2 || ball.x >= width - diameter / 2) {
     ball.xSpeed *= -1;
   }
-  if (ball.y <= 0 + size / 4 || ball.y >= height - size / 4) {
+  if (ball.y <= 0 + diameter / 4 || ball.y >= height - diameter / 2) {
     ball.ySpeed *= -1;
   }
 }
